@@ -12,7 +12,6 @@ object QuickSort extends App {
       List(head)
     case head::restList =>
       val (left, right) = restList.partition(ord.lt(_,head))
-//      print(left,right)
       qSort(left) ++ List(head) ++ qSort(right)
   }
 }
