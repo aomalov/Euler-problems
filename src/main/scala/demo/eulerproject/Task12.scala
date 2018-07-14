@@ -2,8 +2,6 @@ package demo.eulerproject
 
 object Task12 extends App {
 
-  def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
-
   val brutePrimes=Set(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)
 
   def generateTriangularNum(count:Int,start:Int,inc:Int,minSize:Int,checkSeed:Int):Unit = {
@@ -25,11 +23,20 @@ object Task12 extends App {
     }
   }
 
+  def generateSimple():Int = {
+    var triangNum=0
+    for(n<-1 to 15000) {
+      triangNum+=n
+      val sqrtTriangle=Math.round(Math.sqrt(triangNum)).toInt
+      val divisors=for(p<-1 to sqrtTriangle if triangNum%p==0) yield p
+      if(divisors.size*2>500)
+        return triangNum
+    }
+    0
+  }
 
-//  val candidates=List(2080,6480,7840,12160,12880,14080,14400)
-//  for(i<-candidates.indices)
-//    if(i>0) println(gcd(candidates(i-1),candidates(i)))
+  println(generateSimple())
 
-  generateTriangularNum(14400,1,2,500,8)
+//  generateTriangularNum(14400,1,2,500,8)
 
 }
