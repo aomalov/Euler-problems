@@ -1,3 +1,5 @@
+package demo.eulerproject
+
 object Task1 extends App {
 
   val fives = Range(0, 1000, 5).sum

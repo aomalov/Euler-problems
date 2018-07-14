@@ -1,3 +1,4 @@
+package demo.eulerproject
 
 object Task10 extends App {
 

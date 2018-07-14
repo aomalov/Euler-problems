@@ -1,3 +1,5 @@
+package demo.eulerproject
+
 import scala.io.Source
 
 object Task22 extends App {

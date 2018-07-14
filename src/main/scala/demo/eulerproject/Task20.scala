@@ -1,3 +1,5 @@
+package demo.eulerproject
+
 object Task20 extends App {
 
   def factorial(x: Int): Double = x match {

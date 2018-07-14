@@ -1,3 +1,5 @@
+package demo.eulerproject
+
 object Task9 extends App {
 
   val MAX_VAL = 1000
