@@ -3,7 +3,7 @@ object QuickSort extends App {
   val list=List(0,10,6,1,7,8,2,4,5,11)
   val list2=List('d','f','r','q','a')
 
-  print(qSort(list))
+  print(qSort(list2))
 
   def qSort[A](arr:Seq[A])(implicit ord:Ordering[A]):Seq[A] = arr match {
     case Nil =>

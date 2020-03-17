@@ -9,7 +9,7 @@ object TestApp extends App {
       def show(str: String): String = s"string $str"
     }
 
-  println(show(30),show("element"))
+//  println(show(30),show("element"))
   println(30.show,"element".show)
 
 }
